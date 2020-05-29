@@ -1,0 +1,20 @@
+<h1>Cimic - Super Heroes</h1>
+
+
+<!-- Esta linea de codigo muestra una alerta si el termino buscado no se encuentra -->
+
+<div class="row animated fadeIn fast" *ngIf="heroes.length == 0">
+
+    <div class="col-md-12">
+        <div class=" alert alert-info" role="alert">
+            No existen resultados con el termino: {{ termino }}
+        </div>
+    </div>
+
+</div>
+
+<div class="card-columns">
+
+    <app-heroe-tarjeta [heroe]="heroeee" [index]="heroeee.idx" *ngFor="let heroeee of heroes"></app-heroe-tarjeta>
+
+</div>
